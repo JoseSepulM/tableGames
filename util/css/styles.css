@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+    transform: translateY(-5px);
+}
+
+
+main {
+    flex: 1;
+    padding: 1rem;
+}
+
+.category {
+    background: #fff;
+    margin: 10px; /* Agrega margen entre los elementos */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: calc(50% - 20px - 2rem); /* Resta el margen horizontal y el doble del padding */
+    display: flex;
+
+    @media (max-width: 768px) {
+        width: calc(100% - 20px - 2rem); /* Resta el margen horizontal y el doble del padding */
+    }
+}
+
+.category img {
+    margin-left: auto; /* Empuja la imagen hacia la derecha */
+    width: 100px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border: 1px solid #ccc; /* Agrega un borde alrededor de la imagen */
+    border-radius: 8px; /* Agrega bordes redondeados a la imagen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra */
+    margin-left: 20px; /* Espacio entre el contenido y la imagen */
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    cursor:pointer;
+}
+
+.category:hover h2{
+    text-decoration: underline;
+}
+
+.category h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.category p {
+    font-size: 1rem;
+    color: #666;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+.main-container-list {
+    display: flex;
+    flex-wrap: wrap;
+}
