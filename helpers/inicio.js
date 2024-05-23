@@ -32,8 +32,10 @@ function listadoCategorias(){
     let html = '';
     categorias.forEach((element) => {
         html += `<section onclick="detalleCategorias(${element.id})" class="category">`;
-        html += `   <h2>${element.title}</h2>`;
-        html += `   <p>${element.description}</p>`;
+        html += `   <div class="content">`;
+        html += `       <h2>${element.title}</h2>`;
+        html += `       <p>${element.description}</p>`;
+        html += `   </div>`;
         html += `   <img src="../util/images/categories/${element.imagen}" alt="${element.title}">`;
         html += '</section>';
     });

@@ -49,28 +49,44 @@ main {
 
 .category {
     background: #fff;
-    margin: 10px; /* Agrega margen entre los elementos */
+    margin: 10px;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    width: calc(50% - 20px - 2rem); /* Resta el margen horizontal y el doble del padding */
+    width: calc(50% - 20px - 2rem);
+    height: 300px;
     display: flex;
+    align-items: center;
 
     @media (max-width: 768px) {
-        width: calc(100% - 20px - 2rem); /* Resta el margen horizontal y el doble del padding */
+        width: calc(100% - 20px - 2rem); 
+        flex-direction: column;
+    }
+
+    @media (min-width: 1024px) {
+        width: calc(33.333% - 20px - 2rem);
     }
 }
 
-.category img {
-    margin-left: auto; /* Empuja la imagen hacia la derecha */
-    width: 100px; /* Ajusta el ancho de la imagen según tus necesidades */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border: 1px solid #ccc; /* Agrega un borde alrededor de la imagen */
-    border-radius: 8px; /* Agrega bordes redondeados a la imagen */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra */
-    margin-left: 20px; /* Espacio entre el contenido y la imagen */
+.category .content {
+    flex: 1;
 }
+
+.category img {
+    width: 100px; 
+    height: auto; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+
+    @media (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
 
 .category:hover {
     transform: translateY(-5px);
